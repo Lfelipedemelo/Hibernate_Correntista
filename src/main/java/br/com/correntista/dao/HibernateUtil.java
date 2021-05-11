@@ -20,11 +20,11 @@ public class HibernateUtil {
     static {
         try {
             Configuration cfg = new Configuration();
-//            cfg.addAnnotatedClass(Endereco.class);
-//            cfg.addAnnotatedClass(Cartao.class);
+            cfg.addAnnotatedClass(Endereco.class);
+            cfg.addAnnotatedClass(Cartao.class);
             cfg.addAnnotatedClass(Cliente.class);
             cfg.addAnnotatedClass(PessoaFisica.class);
-//            cfg.addAnnotatedClass(PessoaJuridica.class);
+            cfg.addAnnotatedClass(PessoaJuridica.class);
             cfg.addAnnotatedClass(Profissao.class);
             
 

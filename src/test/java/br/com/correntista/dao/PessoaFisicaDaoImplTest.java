@@ -1,15 +1,19 @@
 package br.com.correntista.dao;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.junit.jupiter.api.Test;
 
 import br.com.correntista.vo.PessoaFisica;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static util.GeradorUtil.*;
 
 import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.junit.Test;
 
 class PessoaFisicaDaoImplTest {
 
@@ -35,7 +39,7 @@ class PessoaFisicaDaoImplTest {
 		assertEquals(pessoaFisica.getNome(), pessoaFisicaAlt.getNome());
 	}
 
-//	@Test
+	@Test
 	public void testSalvar() {
 		pessoaFisica = new PessoaFisica(null, gerarNome(), gerarEmail(), gerarCpf(), gerarNumero(7));
 		sessao = HibernateUtil.abrirSessao();
